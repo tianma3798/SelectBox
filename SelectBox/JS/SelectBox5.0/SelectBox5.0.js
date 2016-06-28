@@ -487,6 +487,74 @@
             }
             return parent;
         },
+        //设置选中结果
+        setValue: function (targetID) {
+            var _this = this;
+            //判断是否已经在选中结果中
+            if (_this.isExists(targetID))
+                return;
+            var thisItem = _this.findDataItem(targetID);
+            if (thisItem != null) {
+                //判清空结果
+                _this.clearData();
+                //添加结果，重绘面板
+                _this.appendData(thisItem);
+                _this.showPanel();
+            }
+        },
+        //设置结果多选时
+        setValues: function (array) {
+            var _this = this;
+            if ($.type(array)=='array') {
+                var result = [];
+                for (var i = 0; i < array.length; i++) {
+                    var item = array[i];
+                    //判断是否已经在选中结果中
+                    if (_this.isExists(item))
+                        return;
+                    var thisItem = _this.findDataItem(item);
+                    if (thisItem != null)
+                        result.push(thisItem);
+                }
+                if (result.length > 0) {
+                    //清空结果
+                    for (var i = 0; i < result.length; i++) {
+                        var item = result[i];
+                        //添加结果
+                        _this.appendData(item);
+                    }
+                    //重绘
+                    _this.showPanel();
+                }
+            }
+        },
+        //从当前结构中查找指定ID 的对象,目前支持两级
+        findDataItem: function (targetID) {
+            var _this = this;
+            var _opts = this.opts;
+            if (_opts.level == 1) {
+                return _this.findInArray(targetID, _opts.data);
+            } else {
+                for (var i = 0; i < _opts.data.length; i++) {
+                    var item = _opts.data[i];
+                    var children = item.children;
+                    var result = _this.findInArray(targetID, children);
+                    if (result != null)
+                        return result;
+                }
+            }
+            return null;
+        },
+        findInArray: function (targetID, array) {
+            if (!array)
+                return null;
+            for (var i = 0; i < array.length; i++) {
+                var item = array[i];
+                if (item.id == targetID)
+                    return item;
+            }
+            return null;
+        },
         //判断结果是否已经存在,指定数据对象
         isExists: function (item) {
             var data = this.opts.selectedData;

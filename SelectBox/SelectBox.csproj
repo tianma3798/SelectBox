@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Demo5.0\setdata1.html" />
     <Content Include="Demo5.0\single1.html" />
     <Content Include="Demo5.0\single2.html" />
     <Content Include="Demo5.0\single5.html" />

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../JS/jquery-1.11.1.min.js"></script>
+    <script src="../JS/Common3.0.js"></script>
+  
+    <link href="../JS/SelectBox4.0/SelectBox4.0.css" rel="stylesheet" />
+    <script src="../JS/SelectBox4.0/SelectBox4.0.js"></script>
+</head>
+<body>
+    <input  id="textOne"/>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <!--单选一级-->
+    <div class="selectBox" style="margin:auto;"></div>
+    <script type="text/javascript">
+        //指定选中结果对象
+        $('.selectBox').selectBox({
+            width: 300,
+            data: [
+                { id: '1', text: '计算机应用' },
+                { id: '2', text: '计算机应用b' },
+                { id: '3', text: '英语1' },
+                { id: '4', text: '英语2' },
+                { id: '5', text: '英语3' },
+                { id: '6', text: '生物科学' },
+                { id: '7', text: '广告及公共关系' },
+            ],
+            //selectedData: [2, 5],
+            placeHolder:'选择专业',
+            level: 1,
+            moreSelect: false,
+            autoShow: true,
+            onClose: function (data, idList) {
+                $('#textOne').val(idList);
+            }
+        });
+
+
+        ////指定选中结果json字符串
+        //$('.selectBox').selectBox({
+        //    width: 300,
+        //    data: '[{"id":26,"text":"经营学","children":[]},{"id":38,"text":"社会科学","children":[]},{"id":27,"text":"教育学","children":[]},{"id":31,"text":"人文学","children":[]},{"id":32,"text":"法律学","children":[]},{"id":28,"text":"工科•应用科学","children":[]},{"id":23,"text":"艺术•建筑学","children":[]},{"id":29,"text":"环境学•天然资源学","children":[]},{"id":30,"text":"健康等相关领域","children":[]},{"id":35,"text":" 医学","children":[]},{"id":39,"text":"社会福祉","children":[]},{"id":36,"text":"体育教育•体育休闲","children":[]},{"id":24,"text":"生物学•生物医学","children":[]},{"id":37,"text":"理学    ","children":[]},{"id":34,"text":"数学","children":[]},{"id":22,"text":"农学","children":[]},{"id":33,"text":"图书馆及图书馆信息学","children":[]}]',
+        //    selectedData: [38],
+        //    level: 1,
+        //    moreSelect: false,
+        //    autoShow: true,
+        //    valueTarget: 'textOne'
+        //});
+        //$(window.document).click(function () {
+        //    alert(1);
+        //});
+        //$(window.document).on({
+        //    click: function () {
+        //        alert(3);
+        //    }
+        //});
+    </script>
+</body>
+</html>

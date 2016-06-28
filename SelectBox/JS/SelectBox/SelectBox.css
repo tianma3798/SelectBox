@@ -1,0 +1,152 @@
+﻿
+.clear {
+    clear: both;
+}
+
+/*
+* 1.0
+* 样式
+*/
+.selectBox {
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #E4E5E6;
+    font-size: 13px;
+    font-family: 'Microsoft YaHei';
+    cursor: pointer;
+    position: relative;
+    background: white;
+}
+
+    .selectBox .selectResult {
+        float: left;
+        width: 120px;
+        padding-left: 8px;
+        padding-right: 2px;
+        border: 0px solid red;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .selectBox .placeHolder {
+        color: #888;
+        font-size:13px;
+        font-family:Arial;
+    }
+
+    .selectBox .selectIcon {
+        background: url(icon.png) no-repeat 0px 0px;
+        width: 18px;
+        height: 21px;
+        float: right;
+        position: absolute;
+        top: 50%;
+        margin-top: -11px;
+        right: 2px;
+    }
+
+.selectBoxConter {
+    font-size: 13px;
+    font-family: 'Microsoft YaHei';
+    width: 300px;
+    min-height: 40px;
+    border: 1px solid #a7aab3;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+    background: white;
+    position: absolute;
+    display: none;
+    z-index: 9999;
+}
+
+    .selectBoxConter .selectResult {
+        border: 1px solid red;
+    }
+
+
+    .selectBoxConter .yesBtn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+        padding: 0px 10px;
+        background: #E4E5E6;
+        cursor: pointer;
+    }
+
+    .selectBoxConter .resultRight .yesBtn:hover {
+        color: #1284D2;
+    }
+
+.selectBoxConter .resultRight .closeBtn {
+    background: url(icon.png) no-repeat -30px 0px;
+    width: 15px;
+    height: 15px;
+    float: left;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+/**tab***/
+.selectBoxConter .tabDiv {
+    border-bottom: 1px solid #E4E5E6;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.selectBoxConter .tabItem {
+    width: 50px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+.tabSelectItem {
+    border-bottom: 1px solid #3E9AD9;
+}
+
+.selectBoxConter .panelSelectd {
+    display: block;
+}
+
+
+.selectBoxPanel {
+    margin-top: 0px;
+    display:none;
+}
+
+.selectBoxConter .secondTop {
+    color: #3E9AD9;
+    height: 25px;
+    line-height: 25px;
+}
+
+.selectBoxPanel .selectBoxItem {
+    display: inline-block;
+    float: left;
+    padding: 3px 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+    .selectBoxPanel .selectBoxItem:hover {
+        border: 1px solid #1284D2;
+    }
+
+.selectBoxPanel .selected {
+    border: 1px solid #1284D2;
+}
+
+.selectBoxConter .secondContent {
+    overflow: hidden;
+}

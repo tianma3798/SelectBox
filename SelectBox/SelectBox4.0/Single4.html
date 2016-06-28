@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../JS/jquery-1.11.1.min.js"></script>
+    <script src="../JS/Common3.0.js"></script>
+    <link href="../JS/SelectBox4.0/SelectBox4.0.css" rel="stylesheet" />
+    <script src="../JS/SelectBox4.0/SelectBox4.0.js"></script>
+</head>
+<body>
+    <input type="text" id="txtOne" />
+    <div class="selectBox"></div>
+    <script type="text/javascript">
+        //选择 控件使用----三级
+        $('.selectBox').selectBox({
+            width: 300,
+            data: [
+               {
+                   text: '本科', children: [
+                                       {
+                                           id: '111', text: '计算机系', children: [
+                                               { id: '1', text: '计算机应用a' },
+                                               { id: '2', text: '计算机应用b' },
+                                               { id: '3', text: '英语1' },
+                                               { id: '4', text: '英语2' },
+                                               { id: '5', text: '英语3' },
+                                           ]
+                                       },
+                {
+                    id: '112', text: '商科', children: [
+                    { id: '11', text: '计算机应用a' },
+                    { id: '12', text: '计算机应用b' },
+                    { id: '13', text: '英语1' },
+                    { id: '14', text: '英语2' },
+                    { id: '15', text: '英语3' },
+                    ]
+                }
+                   ]
+               },
+               {
+                   text: '硕士', children: [
+                                       {
+                                           id: '111', text: '计算机系asdfasdf', children: [
+                                               { id: '21', text: '计算机应用a' },
+                                               { id: '22', text: '计算机应用b' },
+                                               { id: '23', text: '英语1' },
+                                               { id: '24', text: '英语2' },
+                                               { id: '25', text: '英语3' },
+                                           ]
+                                       },
+                {
+                    id: '112', text: '计算机应用', children: [
+                    { id: '211', text: '计算机应用a' },
+                    { id: '212', text: '计算机应用b' },
+                    { id: '213', text: '英语1' },
+                    { id: '214', text: '英语2' },
+                    { id: '215', text: '英语3' },
+                    ]
+                }
+                   ]
+               }
+            ],
+            selectedData: [
+                 { id: '1', text: '计算机应用a' },
+                 { id: '5', text: '英语3' },
+            ],
+            level: 3,
+            moreSelcet: true,
+            autoShow:true,
+            valueTarget:'txtOne'
+        });
+    </script>
+</body>
+</html>

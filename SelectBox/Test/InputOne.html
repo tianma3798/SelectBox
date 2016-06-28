@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+    <input type="text" id="txtOne" />
+    <input type="button" id="btnOne" value="btnOne" />
+    <script type="text/javascript">
+        $('#txtOne').change(function () {
+            alert($(this).val());
+        });
+        $('#btnOne').click(function () {
+            $('#txtOne').val('btnOne');
+        });
+    </script>
+</body>
+</html>

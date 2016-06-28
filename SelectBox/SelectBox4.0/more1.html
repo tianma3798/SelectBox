@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../JS/jquery-1.11.1.min.js"></script>
+    <script src="../JS/Common3.0.js"></script>
+
+    <link href="../JS/SelectBox4.0/SelectBox4.0.css" rel="stylesheet" />
+    <script src="../JS/SelectBox4.0/SelectBox4.0.js"></script>
+</head>
+<body>
+    <input id="textOne" />
+    <br />
+    <!--多选一级-->
+    <div class="selectBox"></div>
+    <script type="text/javascript">
+        $('.selectBox').selectBox({
+            width: 300,
+            data: [
+                { id: '1', text: '计算机应用' },
+                { id: '2', text: '人力资管管理' },
+                { id: '3', text: '英语1' },
+                { id: '4', text: '英语2' },
+                { id: '5', text: '英语3' },
+                { id: '6', text: '生物科学' },
+                { id: '7', text: '广告及公共关系' }
+            ],
+            selectedData: [2, 5],
+            level: 1,
+            moreSelcet: true,
+            autoShow: true,
+            maxSize:3,
+            onClose: function (data, idList) {
+                $('#textOne').val(idList);
+            }
+        });
+    </script>
+</body>
+</html>

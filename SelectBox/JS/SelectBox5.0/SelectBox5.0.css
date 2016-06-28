@@ -1,0 +1,238 @@
+﻿
+.clear {
+    clear: both;
+}
+
+/*
+* 5.0
+* 样式
+*/
+/******选择按钮样式******/
+.selectBox {
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #D5D5D5;
+    font-size: 13px;
+    font-family: 'Microsoft YaHei';
+    cursor: pointer;
+    position: relative;
+    background: white;
+    border-radius: 2px;
+}
+.selectBoxFocus {
+    box-shadow: rgba(0,0,0,0.2) 0px 0px 5px;
+}
+.selectBox .selectResult {
+    float: left;
+    width: 120px;
+    height:100%;
+    padding-left: 8px;
+    padding-right: 2px;
+    border: 0px solid red;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.selectBox .placeHolder {
+    color: #aaa;
+    font-family: Arial;
+}
+
+.selectBox .selectIcon {
+    background: url(icon.png) no-repeat 0px 0px;
+    width: 18px;
+    height: 21px;
+    float: right;
+    position: absolute;
+    top: 50%;
+    margin-top: -11px;
+    right: 5px;
+}
+
+.selectBox .parentName {
+    color: #3E9AD9;
+    font-weight: lighter;
+}
+.selectBoxConter {
+    font-size: 12px;
+    line-height:18px;
+    font-family: 'Microsoft YaHei';
+    width: 300px;
+    min-height: 40px;
+    border: 1px solid #D5D5D5;
+    padding-top: 10px;
+    /*padding-left: 5px;*/
+    padding-bottom: 10px;
+    background: white;
+    position: absolute;
+    display: none;
+    z-index: 99991;
+    box-shadow: rgba(0,0,0,0.2) 0px 2px 4px;
+    overflow:auto;
+    user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+}
+
+    .selectBoxConter .selectResult {
+        border: 1px solid red;
+    }
+    /***选择面板样式*****/
+    /**按钮**/
+    .selectBoxConter .clearBtn {
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        padding: 0px 10px;
+        background: #E4E5E6;
+        cursor: pointer;
+        border: 1px solid #D5D5D5;
+        transition: all ease 0.1s;
+        float: right;
+        margin-right: 12px;
+    }
+
+    .selectBoxConter .yesBtn {
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        padding: 0px 10px;
+        background: #E4E5E6;
+        cursor: pointer;
+        border: 1px solid #D5D5D5;
+        transition: all ease 0.1s;
+        float: right;
+        margin-right: 12px;
+    }
+
+        .selectBoxConter .clearBtn:hover,
+        .selectBoxConter .yesBtn:hover {
+            color: #1284D2;
+        }
+
+    .selectBoxConter .resultRight .closeBtn {
+        background: url(icon.png) no-repeat -30px 0px;
+        width: 15px;
+        height: 15px;
+        float: left;
+        cursor: pointer;
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+
+/**tab***/
+.selectBoxConter .tabDiv {
+    border-bottom: 1px solid #E4E5E6;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.selectBoxConter .tabItem {
+    width: 50px;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+}
+
+.tabSelectItem {
+    border-bottom: 1px solid #3E9AD9;
+}
+
+.selectBoxConter .panelSelectd {
+    display: block;
+}
+.selectBoxPanel {
+    margin-top: 0px;
+    display:none;
+}
+/**两级选择**/
+.selectBoxConter .secondLine {
+    border-bottom: 1px dashed #e5e5e5;
+    margin-bottom: 5px;
+    margin-right:3px;
+    margin-left:3px;
+}
+.selectBoxConter .secondTop {
+    color: #3E9AD9;
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+    float: left;
+}
+.selectBoxConter .selectTopItem {
+    width: 70px;
+    text-align: center;
+    border-right: 1px solid #B2C9D6;
+    cursor: no-drop;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.selectBoxConter .topItemEnable {
+    cursor: pointer;
+}
+
+    .selectBoxConter .topItemEnable:hover {
+        color: blue;
+    }
+
+.selectBoxConter .enable {
+    cursor: pointer;
+}
+
+    .selectBoxConter .enable:hover {
+        /*border: 1px solid #DD1A22;*/
+        background-color: #eee;
+    }
+/***选择项****/
+.selectBoxPanel .innerList {
+    padding-left: 10px;
+}
+
+.selectBoxPanel .selectBoxItem {
+    display: inline-block;
+    float: left;
+    padding: 3px 8px;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border: 1px solid #e6e6e6;
+    position: relative;
+    white-space:nowrap;
+}
+
+.moreSelect .selectBoxItem {
+    border: 1px solid #e6e6e6;
+}
+
+.moreSelect .selected i {
+    border: 0px solid red;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    background: url(icon.png) no-repeat -60px 0px;
+}
+
+.selectBoxPanel .selectBoxItem:hover {
+    border: 1px solid #DD1A22;
+}
+
+.selectBoxPanel .selected {
+    border: 1px solid #DD1A22;
+}
+
+.selectBoxConter .secondContent {
+    overflow: hidden;
+}

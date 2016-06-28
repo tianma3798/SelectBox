@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery-1.11.1.min.js"></script>
+    <script src="../JS/Common3.0.js"></script>
+    <link href="../JS/SelectBox/SelectBox.css" rel="stylesheet" />
+    <script src="../JS/SelectBox/SelectBox2.0.js"></script>
+    <style type="text/css">
+        .selectBox {
+            height: 40px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="selectBox"></div>
+
+    <script type="text/javascript">
+        //选择 控件使用----一级
+        $('.selectBox').selectBox({
+            width: 300,
+            data: [
+                { id: '1', text: '计算机应用a' },
+                { id: '2', text: '计算机应用b' },
+                { id: '3', text: '英语1' },
+                { id: '4', text: '英语2' },
+                { id: '5', text: '英语3' },
+            ],
+            selectedData: [2,5],
+            level: 1,
+            moreSelcet: true,
+            onClose: function (data, idList) {
+                $('#textOne').val(idList);
+            }
+        });
+    </script>
+</body>
+</html>

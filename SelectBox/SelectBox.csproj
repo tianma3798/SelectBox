@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9EDD853-FE08-419B-9362-16B1CE18A6AA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SelectBox</RootNamespace>
+    <AssemblyName>SelectBox</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Demo5.0\single1.html" />
+    <Content Include="Demo5.0\single2.html" />
+    <Content Include="Demo5.0\single5.html" />
+    <Content Include="JS\Common3.0.js" />
+    <Content Include="JS\jquery-1.11.1.min.js" />
+    <Content Include="JS\SelectBox4.0\Icon.png" />
+    <Content Include="JS\SelectBox4.0\SelectBox4.0.css" />
+    <Content Include="JS\SelectBox4.0\SelectBox4.0.js" />
+    <Content Include="JS\SelectBox4.0\SelectBox4.0_copy.js" />
+    <Content Include="JS\SelectBox5.0\Icon.png" />
+    <Content Include="JS\SelectBox5.0\SelectBox5.0.css" />
+    <Content Include="JS\SelectBox5.0\SelectBox5.0.js" />
+    <Content Include="JS\SelectBox\Icon.png" />
+    <Content Include="JS\SelectBox\SelectBox3.0.css" />
+    <Content Include="JS\SelectBox\SelectBox.css" />
+    <Content Include="JS\SelectBox\SelectBox.js" />
+    <Content Include="JS\SelectBox\SelectBox3.0.js" />
+    <Content Include="JS\SelectBox\SelectBox2.0.js" />
+    <Content Include="Other\css\share\default.css" />
+    <Content Include="Other\css\share\fonts.css" />
+    <Content Include="Other\css\style.css" />
+    <Content Include="Other\img\jqueryselectable.gif" />
+    <Content Include="Other\index.html" />
+    <Content Include="Other\js\jQselectable.js" />
+    <Content Include="Other\skin\base.css" />
+    <Content Include="Other\skin\natural\select_left.gif" />
+    <Content Include="Other\skin\natural\select_right.gif" />
+    <Content Include="Other\skin\natural\style.css" />
+    <Content Include="Other\skin\selectable\icon_select.gif" />
+    <Content Include="Other\skin\selectable\style.css" />
+    <Content Include="Other\说明.htm" />
+    <Content Include="Other\说明.txt" />
+    <Content Include="SelectBox4.0\more1.html" />
+    <Content Include="SelectBox4.0\more3.html" />
+    <Content Include="SelectBox4.0\more2.html" />
+    <Content Include="SelectBox4.0\Single6.html" />
+    <Content Include="SelectBox4.0\Single1.html" />
+    <Content Include="SelectBox4.0\Single2.html" />
+    <Content Include="SelectBox4.0\Single3.html" />
+    <Content Include="SelectBox4.0\Single4.html" />
+    <Content Include="SelectBox4.0\Single5.html" />
+    <Content Include="Test\InputOne.html" />
+    <Content Include="View\ArrayOne.html" />
+    <Content Include="View\FocusOut.html" />
+    <Content Include="View\HideOne.html" />
+    <Content Include="View\SelectOne.html" />
+    <Content Include="View\SelectThree.html" />
+    <Content Include="View\SelectTwo.html" />
+    <Content Include="View\SingleOne.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JS\SelectBox\Icon.psd" />
+    <Content Include="JS\SelectBox4.0\Icon.psd" />
+    <Content Include="JS\SelectBox5.0\Icon.psd" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Css\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>20095</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:20095/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

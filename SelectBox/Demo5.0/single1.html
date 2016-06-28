@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../JS/jquery-1.11.1.min.js"></script>
+    <script src="../JS/Common3.0.js"></script>
+
+    <link href="../JS/SelectBox5.0/SelectBox5.0.css" rel="stylesheet" />
+    <script src="../JS/SelectBox5.0/SelectBox5.0.js"></script>
+    <style>
+        .fixedOne {
+            width:500px;
+            height:500px;
+            background:gray;
+            position:fixed;
+            top:100px;
+            left:100px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background:red;height:1000px;"></div>
+
+
+    <!--固定容器，位置测试-->
+    <div class="fixedOne">
+        <input id="textOne" />
+        <br />
+        <br />
+        <!--单选一级-->
+        <div class="selectBox" style="margin:auto;"></div>
+    </div>
+
+    <script type="text/javascript">
+        //指定选中结果对象
+        $('.selectBox').selectBox({
+            width: 300,
+            data: [
+                { id: '1', text: '计算机应用' },
+                { id: '2', text: '计算机应用b' },
+                { id: '3', text: '英语1' },
+                { id: '4', text: '英语2' },
+                { id: '5', text: '英语3' },
+                { id: '6', text: '生物科学' },
+                { id: '7', text: '广告及公共关系' },
+            ],
+            selectedData: [2, 5],
+            level: 1,
+            moreSelect: false,
+            autoShow: true,
+            onClose: function (data, idList) {
+                $('#textOne').val(idList);
+            }
+        });
+
+        console.info($('.selectBox').offset());
+        $(window).scroll(function () {
+            //console.info($('.selectBox').offset());
+
+           console.info($('.selectBoxConter').offset());
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../JS/jquery-1.11.1.min.js"></script>
+    <script src="../JS/Common3.0.js"></script>
+    <link href="../JS/SelectBox4.0/SelectBox4.0.css" rel="stylesheet" />
+    <script src="../JS/SelectBox4.0/SelectBox4.0.js"></script>
+</head>
+<body>
+    <input id="textOne" />
+    <br /><br /><br /><br /><br />
+    <!--单选两级级-->
+    <div class="selectBox"></div>
+    <script type="text/javascript">
+        //多选两级，显示全名
+        //$('.selectBox').selectBox({
+        //    width: 500,
+        //    data: '[{"id":1,"text":"高中高中","children":[{"id":7,"text":"高一","children":[]},{"id":8,"text":"高二","children":[]},{"id":9,"text":"高三","children":[]},{"id":10,"text":"毕业","children":[]}]},{"id":2,"text":"大专","children":[{"id":11,"text":"大一","children":[]},{"id":12,"text":"大二","children":[]},{"id":13,"text":"大三","children":[]},{"id":14,"text":"毕业","children":[]}]},{"id":3,"text":"本科","children":[{"id":15,"text":"大一","children":[]},{"id":16,"text":"大二","children":[]},{"id":17,"text":"大三","children":[]},{"id":18,"text":"大四","children":[]},{"id":19,"text":"毕业","children":[]}]},{"id":4,"text":"研究生","children":[{"id":20,"text":"研一","children":[]},{"id":21,"text":"研二","children":[]},{"id":22,"text":"研三","children":[]},{"id":23,"text":"毕业","children":[]}]},{"id":5,"text":"博士","children":[{"id":24,"text":"在读","children":[]},{"id":25,"text":"毕业","children":[]}]},{"id":6,"text":"其他","children":[{"id":26,"text":"职高","children":[]},{"id":27,"text":"技校","children":[]},{"id":28,"text":"中专","children":[]}]}]',
+        //    level: 2,
+        //    moreSelect: true,
+        //    autoShow: true,
+        //    valueTarget: 'textOne'
+        //});
+
+
+        //单选两级，全名显示
+        $('.selectBox').selectBox({
+            width: 500,
+            data: '[{"id":1,"text":"高中高中","children":[{"id":7,"text":"高一","children":[]},{"id":8,"text":"高二","children":[]},{"id":9,"text":"高三","children":[]},{"id":10,"text":"毕业","children":[]}]},{"id":2,"text":"大专","children":[{"id":11,"text":"大一","children":[]},{"id":12,"text":"大二","children":[]},{"id":13,"text":"大三","children":[]},{"id":14,"text":"毕业","children":[]}]},{"id":3,"text":"本科","children":[{"id":15,"text":"大一","children":[]},{"id":16,"text":"大二","children":[]},{"id":17,"text":"大三","children":[]},{"id":18,"text":"大四","children":[]},{"id":19,"text":"毕业","children":[]}]},{"id":4,"text":"研究生","children":[{"id":20,"text":"研一","children":[]},{"id":21,"text":"研二","children":[]},{"id":22,"text":"研三","children":[]},{"id":23,"text":"毕业","children":[]}]},{"id":5,"text":"博士","children":[{"id":24,"text":"在读","children":[]},{"id":25,"text":"毕业","children":[]}]},{"id":6,"text":"其他","children":[{"id":26,"text":"职高","children":[]},{"id":27,"text":"技校","children":[]},{"id":28,"text":"中专","children":[]}]}]',
+            level: 2,
+            moreSelect: false,
+            levelTwoSelect:false,
+            autoShow: true,
+            valueTarget: 'textOne'
+        });
+    </script>
+</body>
+</html>

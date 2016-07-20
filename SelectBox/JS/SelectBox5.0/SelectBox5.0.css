@@ -25,7 +25,6 @@
 }
 .selectBox .selectResult {
     float: left;
-    width: 120px;
     height:100%;
     padding-left: 8px;
     padding-right: 2px;
@@ -83,6 +82,23 @@
     .selectBoxConter .selectResult {
         border: 1px solid red;
     }
+    /**定义样式2**/
+.selectBoxMini {
+    border:1px solid #bbbbbb;
+    height:38px;
+    line-height:38px;
+}
+.selectBoxMini .selectIcon {
+    background: url(icon.png) no-repeat 0px -30px;
+    width: 18px;
+    height: 21px;
+    float: right;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    right: 5px;
+}
+
     /***选择面板样式*****/
     /**按钮**/
     .selectBoxConter .clearBtn {

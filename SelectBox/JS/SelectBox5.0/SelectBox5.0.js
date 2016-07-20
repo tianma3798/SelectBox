@@ -434,9 +434,12 @@
             //显示结果
             _this.showResult();
         },
-        //清空结果
+        //清空结果数据
         clearData: function () {
+            //清空数据
             this.opts.selectedData = [];
+            //清空显示
+            this.elem.find('.selectResult').empty();
         },
         //获取选中结果
         getData: function () {
@@ -446,7 +449,7 @@
         getDataCount: function () {
             return this.getData().length;
         },
-        //获取选中结果ID
+        //获取选中结果ID列表
         getDataID: function () {
             var idList = [];
             var data = this.getData();
@@ -457,7 +460,7 @@
             return idList;
         },
         //两级最终选择，获取选中结果的上一级
-        getLevel2ID: function (targetID) {
+        getLevel2Value: function (targetID) {
             var _this = this;
             var _opts = this.opts;
             for (var i = 0; i < _opts.data.length; i++) {
@@ -478,7 +481,7 @@
             var parent = [];
             for (var i = 0; i < selected.length; i++) {
                 var item = selected[i];
-                var temp = _this.getLevel2ID(item.id);
+                var temp = _this.getLevel2Value(item.id);
                 //判断当前父级是否已经找到
                 if (existInList(temp, parent))
                     continue;
@@ -490,22 +493,24 @@
         //设置选中结果
         setValue: function (targetID) {
             var _this = this;
+            //判清空结果
+            _this.clearData();
             //判断是否已经在选中结果中
             if (_this.isExists(targetID))
                 return;
             var thisItem = _this.findDataItem(targetID);
             if (thisItem != null) {
-                //判清空结果
-                _this.clearData();
                 //添加结果，重绘面板
                 _this.appendData(thisItem);
-                _this.showPanel();
             }
         },
         //设置结果多选时
         setValues: function (array) {
             var _this = this;
-            if ($.type(array)=='array') {
+            //清空结果
+            _this.clearData();
+
+            if ($.type(array) == 'array') {
                 var result = [];
                 for (var i = 0; i < array.length; i++) {
                     var item = array[i];
@@ -517,14 +522,11 @@
                         result.push(thisItem);
                 }
                 if (result.length > 0) {
-                    //清空结果
                     for (var i = 0; i < result.length; i++) {
                         var item = result[i];
                         //添加结果
                         _this.appendData(item);
                     }
-                    //重绘
-                    _this.showPanel();
                 }
             }
         },

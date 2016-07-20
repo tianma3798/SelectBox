@@ -59,9 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Demo5.0\setdata1.html" />
+    <Content Include="Demo5.0\setdata2.html" />
     <Content Include="Demo5.0\single1.html" />
     <Content Include="Demo5.0\single2.html" />
     <Content Include="Demo5.0\single5.html" />
+    <Content Include="Demo5.0\style1.html" />
+    <Content Include="Demo5.0\style2.html" />
     <Content Include="JS\Common3.0.js" />
     <Content Include="JS\jquery-1.11.1.min.js" />
     <Content Include="JS\SelectBox4.0\Icon.png" />
@@ -71,6 +74,7 @@
     <Content Include="JS\SelectBox5.0\Icon.png" />
     <Content Include="JS\SelectBox5.0\SelectBox5.0.css" />
     <Content Include="JS\SelectBox5.0\SelectBox5.0.js" />
+    <Content Include="JS\SelectBox5.0\SelectBox5.0.min.js" />
     <Content Include="JS\SelectBox\Icon.png" />
     <Content Include="JS\SelectBox\SelectBox3.0.css" />
     <Content Include="JS\SelectBox\SelectBox.css" />

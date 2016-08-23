@@ -4,7 +4,7 @@
 * SelectBox 5.0 
 * 1.解决在父容器fixe中的结果面板位置bug
 * 2.添加结果面板panelWidth=auto 功能，自动的意思是：和选择框的宽度相同
-*
+* 3.添加 _this.getContainer()方法，解决同一个页面多个控件的面板重置bug
 */
 (function () {
     //当前的数据格式 
@@ -49,7 +49,6 @@
         } else if (opts.selectedData == undefined) {
             opts.selectedData = [];
         }
-
         opts.selectedData = initSelectedData(opts.data, opts.selectedData, opts.level);
         this.opts = $.extend({}, defaults, opts);
     }
@@ -235,7 +234,7 @@
             var _elem = this.elem;
 
             var _opts = this.opts;
-            var container = $('.selectBoxConter');
+            var container = _this.getContainer();
 
             container.css({
                 //top: _elem.offset().top + _elem.outerHeight() + 2,
@@ -250,6 +249,10 @@
                     height: _opts.panelHeight
                 });
             }
+        },
+        //获取 面板容器 selectBoxConter
+        getContainer: function () {
+            return this.elem.find('.selectBoxConter');
         },
         //获取panel 一级选择
         getPanelOne: function () {

@@ -58,13 +58,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Demo5.0\padding1.html" />
+    <Content Include="Demo5.0\panelWidth2.html" />
     <Content Include="Demo5.0\setdata1.html" />
     <Content Include="Demo5.0\setdata2.html" />
     <Content Include="Demo5.0\single1.html" />
     <Content Include="Demo5.0\single2.html" />
     <Content Include="Demo5.0\single5.html" />
+    <Content Include="Demo5.0\panelWidth.html" />
     <Content Include="Demo5.0\style1.html" />
     <Content Include="Demo5.0\style2.html" />
+    <Content Include="Demo5.0\style3.html" />
     <Content Include="JS\Common3.0.js" />
     <Content Include="JS\jquery-1.11.1.min.js" />
     <Content Include="JS\SelectBox4.0\Icon.png" />

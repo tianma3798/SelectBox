@@ -5,6 +5,7 @@
 * 1.解决在父容器fixe中的结果面板位置bug
 * 2.添加结果面板panelWidth=auto 功能，自动的意思是：和选择框的宽度相同
 * 3.添加 _this.getContainer()方法，解决同一个页面多个控件的面板重置bug
+* 4.使用container的marginLeft，marginTop 解决selectResult设置padding属性时的位置问题
 */
 (function () {
     //当前的数据格式 
@@ -235,12 +236,15 @@
 
             var _opts = this.opts;
             var container = _this.getContainer();
-
+            //计算padding 
+            var paddingTop = (_elem.outerHeight() - _elem.height()) / 2;
+            var paddingLeft = (_elem.outerWidth() - _elem.width()) / 2;
             container.css({
                 //top: _elem.offset().top + _elem.outerHeight() + 2,
-                //left: _elem.offset().left,
-                marginTop: 2,
-                width: _opts.panelWidth=='auto'?_elem.width():_opts.panelWidth
+                //left: -paddingLeft,
+                marginLeft: -paddingLeft,
+                marginTop: paddingTop + 1,
+                width: _opts.panelWidth == 'auto' ? _elem.width() : _opts.panelWidth
             }).click(function () {
                 return false;
             });

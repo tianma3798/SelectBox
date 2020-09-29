@@ -19,7 +19,7 @@
             panelHeight: 'auto',//显示结果的高度
             data: [],//控件的数据源
             selectedData: [],//选中结果的对象，列表
-            placeHolder:'',
+            placeHolder: '',
             valueTarget: '',//选中结果绑定的表单对象ID
             showClearBtn: true,// 是否显示清楚按钮
             clearBtnText: '清空',//清空按钮文本
@@ -307,7 +307,7 @@
                             //隐藏
                             _this.destroyPanel();
                             //触发选择事件
-                            _this.opts.onSelect({id:thisItem.attr('data-id'),text:thisItem.text()}, _this.getDataID());
+                            _this.opts.onSelect({ id: thisItem.attr('data-id'), text: thisItem.text() }, _this.getDataID());
                         });
                     }
                 top.append(topItem);
@@ -431,7 +431,7 @@
             var _this = this;
             var _opts = this.opts;
             var data = _opts.selectedData;
-            for (var i = data.length - 1; i >= 0 ; i--) {
+            for (var i = data.length - 1; i >= 0; i--) {
                 //删除相同的ID
                 var currentItem = data[i];
                 if (currentItem.id == item.id) {
@@ -528,6 +528,7 @@
                     if (thisItem != null)
                         result.push(thisItem);
                 }
+             
                 if (result.length > 0) {
                     for (var i = 0; i < result.length; i++) {
                         var item = result[i];
@@ -546,6 +547,9 @@
             } else {
                 for (var i = 0; i < _opts.data.length; i++) {
                     var item = _opts.data[i];
+                    //如果是父类，直接返回
+                    if (item.id == targetID)
+                        return { id: item.id, text: item.text };
                     var children = item.children;
                     var result = _this.findInArray(targetID, children);
                     if (result != null)
